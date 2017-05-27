@@ -15,8 +15,8 @@ categories: 工具
 经过查找，发现了一个简单的方法，可以单次在当前命令行窗口实现代理。
 
 ```bash
-export http_proxy=http://127.0.0.1:8087
-export https_proxy=http://127.0.0.1:8087
+export http_proxy=127.0.0.1:1087
+export https_proxy=127.0.0.1:1087
 ```
 
 以上将http https协议代理到本地的8087端口,且只对当前终端窗口有效。如果不需要代理，关掉当前窗口，
