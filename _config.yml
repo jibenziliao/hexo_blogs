@@ -6,16 +6,95 @@
 title: 基本资料的博客
 subtitle:
 description: 前端开发者
-author: 基本资料/柯洋洋
+keywords: 基本资料/柯洋洋
+author: 基本资料
 language: zh-CN
 timezone:
+avatar: https://img.vim-cn.com/b6/9c0d81a340b047d485df7564f1a111f77e94ae.jpg
+motto: 这是我的座右铭
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://jibenziliao.github.io
+url: https://blog.keyangyang.xyz
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+
+shortcut_icon: "https://xaoxuu.com/assets/img/favicon.ico"
+favicon: "https://xaoxuu.com/assets/img/favicon.ico"
+
+# 导航栏
+nav_menu:
+  # - name: 主页
+  #   icon: fas fa-home
+  #   url: /home
+  # - name: 项目
+  #   icon: fas fa-flask
+  #   url: /project
+  - name: 博客
+    icon: fas fa-rss
+    url: /
+  - name: 归档
+    icon: fas fa-archive
+    url: archives/
+  # - name: 关于
+  #   icon: fas fa-user
+  #   url: /about
+
+# 公告的写法示例，这只是个例子哦，需要显示公告的时候写在主目录的config中，不需要的时候注释掉就可以，如果你十分喜欢这个主题，可以把这个公告copy到你那里😄
+announcement: '本站使用 <b><a href="https://xaoxuu.com/wiki/material-x/">Material X</a></b> 作为主题，喜欢这个主题的朋友可以阅读文档进行安装哦。'
+
+# 右边的小窗口，不想显示哪一项的把enable设置为false即可
+widgets:
+  # 博主信息区，是否显示个人头像、格言、社交信息等
+  author:
+    enable: true
+    avatar: true # 是否显示头像，如果是，需要在主目录的config中写avatar的URL
+    title: false # 是否显示博客名、头衔等等。如果是，需要在主目录的config中写title
+    motto: false # 是否显示格言座右铭等等。如果是，需要在主目录的config中写motto
+    social: true # 是否显示社交信息（内容同页脚的社交信息）如果是，需要在主目录的config中写social，支持icon和URL
+    music: false
+  # 公告，内容写在主目录的config中
+  announcement:
+    enable: true
+    icon: fas fa-bullhorn
+    title: "公告"
+  # 显示文章分类
+  categories:
+    enable: true
+    icon: fas fa-folder-open
+    title: "分类"
+  # 显示文章标签
+  tagcloud:
+    enable: true
+    icon: fas fa-tags
+    title: "标签"
+  # 显示网易云歌单
+  music:
+    enable: true
+    icon: fas fa-headphones-alt
+    title: "音乐"
+    playlist_id: 77205287 # 歌单id
+  # 显示友链，友链的内容写在主目录的config中
+  links:
+    enable: true
+    icon: fas fa-handshake
+    title: "友链"
+    mailto: "1501718947@qq.com" # 右边显示➕ ，点击给这个地址发送邮件添加友链
+  # 显示目录（在文章中设置toc:false可以隐藏单篇文章的目录）
+  toc:
+    enable: true
+    icon: fas fa-list
+    title: "目录"
+
+# 页脚社交信息
+social:
+  - icon: fas fa-envelope
+    url: mailto:1501718947@qq.com
+  - icon: fab fa-github
+    url: https://github.com/jibenziliao
+  - icon: fas fa-music
+    url: https://music.163.com/#/user/home?id=58268903
 
 # Directory
 source_dir: source
@@ -34,7 +113,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
+post_asset_folder: false
 relative_link: false
 future: true
 highlight:
@@ -42,7 +121,16 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-
+  
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+  
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -63,7 +151,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: material
+theme: material-x
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -71,5 +159,3 @@ deploy:
   type: git
   repository: https://github.com/jibenziliao/jibenziliao.github.io.git
   branch: master
-
-
